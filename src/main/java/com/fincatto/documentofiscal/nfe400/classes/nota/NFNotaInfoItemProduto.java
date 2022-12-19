@@ -214,7 +214,7 @@ public class NFNotaInfoItemProduto extends DFBase {
     }
 
     public void setNumeroPedidoCliente(final String numeroPedidoCliente) {
-        StringValidador.tamanho15(numeroPedidoCliente, "Numero Pedido Cliente Produto");
+        StringValidador.tamanho100(numeroPedidoCliente, "Numero Pedido Cliente Produto");
         this.numeroPedidoCliente = numeroPedidoCliente;
     }
 
