@@ -135,7 +135,7 @@ public class NFNotaInfoItemProduto extends DFBase {
     }
 
     public void setDescricao(final String descricao) {
-        StringValidador.tamanho120(descricao, "Descricao Produto");
+        StringValidador.tamanho500(descricao, "Descricao Produto");
         this.descricao = descricao;
     }
 
