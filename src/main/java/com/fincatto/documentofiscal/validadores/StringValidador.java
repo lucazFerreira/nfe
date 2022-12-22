@@ -156,6 +156,12 @@ public abstract class StringValidador {
             StringValidador.validaTamanhoMaximo(string, 40, info);
         }
     }
+    
+    public static void tamanho50(final String string, final String info) {
+        if (string != null) {
+            StringValidador.validaTamanhoMaximo(string, 50, info);
+        }
+    }
 
     public static void placaDeVeiculo(final String placaVeiculo) {
         if (placaVeiculo != null) {

@@ -177,7 +177,7 @@ public class NFNotaInfoItemProduto extends DFBase {
     }
 
     public void setUnidadeTributavel(final String unidadeTributavel) {
-        StringValidador.tamanho6(unidadeTributavel, "Unidade Tributavel Produto");
+        StringValidador.tamanho50(unidadeTributavel, "Unidade Tributavel Produto");
         this.unidadeTributavel = unidadeTributavel;
     }
 
