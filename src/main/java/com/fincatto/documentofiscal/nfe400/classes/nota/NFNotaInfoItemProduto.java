@@ -155,7 +155,7 @@ public class NFNotaInfoItemProduto extends DFBase {
     }
 
     public void setUnidadeComercial(final String unidadeComercial) {
-        StringValidador.tamanho6(unidadeComercial, "Unidade Comercial Produto");
+        StringValidador.tamanho50(unidadeComercial, "Unidade Comercial Produto");
         this.unidadeComercial = unidadeComercial;
     }
 
