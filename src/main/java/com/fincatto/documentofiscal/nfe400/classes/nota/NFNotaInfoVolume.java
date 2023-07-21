@@ -1,7 +1,6 @@
 package com.fincatto.documentofiscal.nfe400.classes.nota;
 
 import java.math.BigDecimal;
-import java.math.BigInteger;
 import java.util.List;
 
 import org.simpleframework.xml.Element;
@@ -16,7 +15,7 @@ public class NFNotaInfoVolume extends DFBase {
     private static final long serialVersionUID = -7649649556872297786L;
 
     @Element(name = "qVol", required = false)
-    private BigInteger quantidadeVolumesTransportados;
+    private String quantidadeVolumesTransportados;
 
     @Element(name = "esp", required = false)
     private String especieVolumesTransportados;
@@ -36,7 +35,7 @@ public class NFNotaInfoVolume extends DFBase {
     @ElementList(entry = "lacres", inline = true, required = false)
     private List<NFNotaInfoLacre> lacres;
 
-    public void setQuantidadeVolumesTransportados(final BigInteger quantidadeVolumesTransportados) {
+    public void setQuantidadeVolumesTransportados(final String quantidadeVolumesTransportados) {
         this.quantidadeVolumesTransportados = quantidadeVolumesTransportados;
     }
 
@@ -68,7 +67,7 @@ public class NFNotaInfoVolume extends DFBase {
         this.lacres = lacres;
     }
 
-    public BigInteger getQuantidadeVolumesTransportados() {
+    public String getQuantidadeVolumesTransportados() {
         return this.quantidadeVolumesTransportados;
     }
 
