@@ -1251,7 +1251,7 @@ public class FabricaDeObjetosFake {
         volume.setNumeracaoVolumesTransportados("mcBUtZwnI5DKj2YZNAcLP7W9h6j1xKmF5SX1BTKmsvyg0H5xSrfVw8HGn8eb");
         volume.setPesoBruto(new BigDecimal("1.358"));
         volume.setPesoLiquido(new BigDecimal("1"));
-        volume.setQuantidadeVolumesTransportados(new BigInteger("99999999999"));
+        volume.setQuantidadeVolumesTransportados(new BigInteger("99999999999").toString());
         return volume;
     }
 }
