@@ -62,7 +62,7 @@ public class NFNotaInfoItemImpostoPIS extends DFBase {
     }
 
 	public void setValorBaseCalculo(final BigDecimal valorBaseCalculo) {
-        this.valorBaseCalculo = BigDecimalParser.tamanho15Com2CasasDecimais(valorBaseCalculo, "Valor BC Importacao Item");;
+        this.valorBaseCalculo = BigDecimalParser.tamanho15Com2CasasDecimais(valorBaseCalculo, "Valor BC Importacao Item");
 	}
 
     public NFNotaInfoItemImpostoPISAliquota getAliquota() {
