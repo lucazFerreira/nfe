@@ -1,8 +1,11 @@
 package com.fincatto.documentofiscal.nfe400.classes.nota;
 
+import java.math.BigDecimal;
+
 import org.simpleframework.xml.Element;
 
 import com.fincatto.documentofiscal.DFBase;
+import com.fincatto.documentofiscal.validadores.BigDecimalParser;
 
 public class NFNotaInfoItemImpostoPIS extends DFBase {
     private static final long serialVersionUID = -948777317305298911L;
@@ -18,12 +21,16 @@ public class NFNotaInfoItemImpostoPIS extends DFBase {
 
     @Element(name = "PISOutr", required = false)
     private NFNotaInfoItemImpostoPISOutrasOperacoes outrasOperacoes;
+    
+    @Element(name = "vBC", required = false)
+    private String valorBaseCalculo;
 
     public NFNotaInfoItemImpostoPIS() {
         this.aliquota = null;
         this.quantidade = null;
         this.naoTributado = null;
         this.outrasOperacoes = null;
+        this.valorBaseCalculo = null;
     }
 
     public void setAliquota(final NFNotaInfoItemImpostoPISAliquota aliquota) {
@@ -54,6 +61,10 @@ public class NFNotaInfoItemImpostoPIS extends DFBase {
         this.outrasOperacoes = outrasOperacoes;
     }
 
+	public void setValorBaseCalculo(final BigDecimal valorBaseCalculo) {
+        this.valorBaseCalculo = BigDecimalParser.tamanho15Com2CasasDecimais(valorBaseCalculo, "Valor BC Importacao Item");
+	}
+
     public NFNotaInfoItemImpostoPISAliquota getAliquota() {
         return this.aliquota;
     }
@@ -69,4 +80,9 @@ public class NFNotaInfoItemImpostoPIS extends DFBase {
     public NFNotaInfoItemImpostoPISOutrasOperacoes getOutrasOperacoes() {
         return this.outrasOperacoes;
     }
+
+	public String getValorBaseCalculo() {
+		return this.valorBaseCalculo;
+	}
+    
 }
