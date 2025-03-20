@@ -52,7 +52,7 @@ public class NFNotaInfoItemProdutoDeclaracaoImportacao extends DFBase {
     private List<NFNotaInfoItemProdutoDeclaracaoImportacaoAdicao> adicoes;
 
     public void setNumeroRegistro(final String numeroRegistro) {
-        StringValidador.tamanho12(numeroRegistro, "Numero Registro Declaracao Importacao");
+        StringValidador.tamanho15(numeroRegistro, "Numero Registro Declaracao Importacao");
         this.numeroRegistro = numeroRegistro;
     }
 
