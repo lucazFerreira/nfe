@@ -28,9 +28,9 @@ public class NFNotaInfoItemImpostoCOFINSAliquota extends DFBase {
     private String valor;
 
     public void setSituacaoTributaria(final NFNotaInfoSituacaoTributariaCOFINS situacaoTributaria) {
-        if (!NFNotaInfoItemImpostoCOFINSAliquota.SITUACOES_VALIDAS.contains(situacaoTributaria)) {
-            throw new IllegalStateException("Situacao tributaria invalido no item COFINS Aliquota.");
-        }
+//        if (!NFNotaInfoItemImpostoCOFINSAliquota.SITUACOES_VALIDAS.contains(situacaoTributaria)) {
+//            throw new IllegalStateException("Situacao tributaria invalido no item COFINS Aliquota.");
+//        }
         this.situacaoTributaria = situacaoTributaria;
     }
 
