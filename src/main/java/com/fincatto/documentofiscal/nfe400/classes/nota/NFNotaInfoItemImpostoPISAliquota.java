@@ -35,9 +35,9 @@ public class NFNotaInfoItemImpostoPISAliquota extends DFBase {
     }
 
     public void setSituacaoTributaria(final NFNotaInfoSituacaoTributariaPIS situacaoTributaria) {
-        if (!NFNotaInfoItemImpostoPISAliquota.SITUACOES_VALIDAS.contains(situacaoTributaria)) {
-            throw new IllegalStateException("Situacao tributaria invalida no item PIS aliquota");
-        }
+//        if (!NFNotaInfoItemImpostoPISAliquota.SITUACOES_VALIDAS.contains(situacaoTributaria)) {
+//            throw new IllegalStateException("Situacao tributaria invalida no item PIS aliquota");
+//        }
         this.situacaoTributaria = situacaoTributaria;
     }
 
