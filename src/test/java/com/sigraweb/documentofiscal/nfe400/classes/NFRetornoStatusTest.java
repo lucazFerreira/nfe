@@ -1,0 +1,49 @@
+package com.sigraweb.documentofiscal.nfe400.classes;
+
+import org.junit.Assert;
+import org.junit.Test;
+
+public class NFRetornoStatusTest {
+
+    @Test
+    public void valueOfCodigoStringTest() {
+        Assert.assertEquals(NFRetornoStatus.CODIGO_100, NFRetornoStatus.valueOfCodigo("100"));
+    }
+
+    @Test
+    public void valueOfCodigoIntegerTest() {
+        Assert.assertEquals(NFRetornoStatus.CODIGO_100, NFRetornoStatus.valueOfCodigo(100));
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void valueOfCodigoNaoMapeadoTest() {
+        NFRetornoStatus.valueOfCodigo(666);
+    }
+
+    @Test
+    public void isAutorizadoTest() {
+        Assert.assertTrue(NFRetornoStatus.CODIGO_100.isAutorizado());
+        Assert.assertFalse(NFRetornoStatus.CODIGO_620.isAutorizado());
+    }
+
+    @Test
+    public void isDenegadoTest() {
+        Assert.assertTrue(NFRetornoStatus.CODIGO_110.isDenegado());
+        Assert.assertTrue(NFRetornoStatus.CODIGO_301.isDenegado());
+        Assert.assertTrue(NFRetornoStatus.CODIGO_302.isDenegado());
+        Assert.assertTrue(NFRetornoStatus.CODIGO_303.isDenegado());
+        Assert.assertFalse(NFRetornoStatus.CODIGO_100.isDenegado());
+    }
+
+    @Test
+    public void isRejeitadoTest() {
+        Assert.assertTrue(NFRetornoStatus.CODIGO_230.isRejeitado());
+        Assert.assertFalse(NFRetornoStatus.CODIGO_100.isRejeitado());
+    }
+
+    @Test
+    public void isDuplicadoTest() {
+        Assert.assertTrue(NFRetornoStatus.CODIGO_539.isDuplicado());
+        Assert.assertFalse(NFRetornoStatus.CODIGO_100.isDuplicado());
+    }
+}
