@@ -2,12 +2,18 @@ package com.sigraweb.documentofiscal.nfe310.classes.nota;
 
 import java.math.BigDecimal;
 
-import com.sigraweb.documentofiscal.nfe310.classes.*;
 import org.junit.Assert;
 import org.junit.Test;
 
 import com.sigraweb.documentofiscal.nfe310.FabricaDeObjetosFake;
-import com.fincatto.documentofiscal.nfe310.classes.*;
+import com.sigraweb.documentofiscal.nfe310.classes.NFNotaInfoCombustivelTipo;
+import com.sigraweb.documentofiscal.nfe310.classes.NFNotaInfoEspecieVeiculo;
+import com.sigraweb.documentofiscal.nfe310.classes.NFNotaInfoItemProdutoVeiculoCondicao;
+import com.sigraweb.documentofiscal.nfe310.classes.NFNotaInfoItemProdutoVeiculoCondicaoChassi;
+import com.sigraweb.documentofiscal.nfe310.classes.NFNotaInfoItemProdutoVeiculoRestricao;
+import com.sigraweb.documentofiscal.nfe310.classes.NFNotaInfoItemProdutoVeiculoTipoOperacao;
+import com.sigraweb.documentofiscal.nfe310.classes.NFNotaInfoTipoVeiculo;
+import com.sigraweb.documentofiscal.nfe310.classes.NFNotaInfoVeiculoCor;
 
 public class NFNotaInfoItemProdutoVeiculoTest {
 

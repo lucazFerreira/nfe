@@ -2,11 +2,14 @@ package com.sigraweb.documentofiscal.nfe310.classes.nota;
 
 import java.math.BigDecimal;
 
-import com.sigraweb.documentofiscal.nfe310.classes.*;
 import org.junit.Assert;
 import org.junit.Test;
 
-import com.fincatto.documentofiscal.nfe310.classes.*;
+import com.sigraweb.documentofiscal.nfe310.classes.NFNotaInfoImpostoTributacaoICMS;
+import com.sigraweb.documentofiscal.nfe310.classes.NFNotaInfoItemModalidadeBCICMS;
+import com.sigraweb.documentofiscal.nfe310.classes.NFNotaInfoItemModalidadeBCICMSST;
+import com.sigraweb.documentofiscal.nfe310.classes.NFNotaMotivoDesoneracaoICMS;
+import com.sigraweb.documentofiscal.nfe310.classes.NFOrigem;
 
 public class NFNotaInfoItemImpostoICMS70Test {
 

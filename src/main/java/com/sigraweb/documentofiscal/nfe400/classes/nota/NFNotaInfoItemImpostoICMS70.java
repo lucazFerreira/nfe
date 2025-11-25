@@ -1,7 +1,6 @@
 package com.sigraweb.documentofiscal.nfe400.classes.nota;
 
 import com.sigraweb.documentofiscal.DFBase;
-import com.fincatto.documentofiscal.nfe400.classes.*;
 import com.sigraweb.documentofiscal.nfe400.classes.*;
 import com.sigraweb.documentofiscal.validadores.BigDecimalParser;
 import org.simpleframework.xml.Element;

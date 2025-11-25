@@ -5,7 +5,7 @@ import com.sigraweb.documentofiscal.assinatura.AssinaturaDigital;
 import com.sigraweb.documentofiscal.nfe.NFeConfig;
 import com.sigraweb.documentofiscal.nfe310.classes.NFAutorizador31;
 import com.sigraweb.documentofiscal.nfe310.classes.evento.NFEnviaEventoRetorno;
-import com.fincatto.documentofiscal.nfe310.classes.evento.manifestacaodestinatario.*;
+import com.sigraweb.documentofiscal.nfe310.classes.evento.manifestacaodestinatario.*;
 import com.sigraweb.documentofiscal.nfe310.classes.evento.manifestacaodestinatario.*;
 import com.sigraweb.documentofiscal.nfe310.parsers.NotaFiscalChaveParser;
 import com.sigraweb.documentofiscal.nfe310.webservices.gerado.RecepcaoEventoStub;

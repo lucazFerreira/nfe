@@ -3,7 +3,7 @@ package com.sigraweb.documentofiscal.cte300.webservices;
 import com.sigraweb.documentofiscal.assinatura.AssinaturaDigital;
 import com.sigraweb.documentofiscal.cte300.CTeConfig;
 import com.sigraweb.documentofiscal.cte300.classes.CTAutorizador31;
-import com.fincatto.documentofiscal.cte300.classes.evento.cancelamento.*;
+import com.sigraweb.documentofiscal.cte300.classes.evento.cancelamento.*;
 import com.sigraweb.documentofiscal.cte300.classes.evento.cancelamento.*;
 import com.sigraweb.documentofiscal.cte300.parsers.CTChaveParser;
 import com.sigraweb.documentofiscal.cte300.webservices.recepcaoevento.RecepcaoEventoStub;

@@ -2,7 +2,7 @@ package com.sigraweb.documentofiscal.nfe.webservices.distribuicao;
 
 import com.sigraweb.documentofiscal.DFUnidadeFederativa;
 import com.sigraweb.documentofiscal.nfe.NFeConfig;
-import com.fincatto.documentofiscal.nfe.classes.distribuicao.*;
+import com.sigraweb.documentofiscal.nfe.classes.distribuicao.*;
 import com.sigraweb.documentofiscal.nfe.classes.distribuicao.*;
 import com.sigraweb.documentofiscal.nfe310.classes.NFAutorizador31;
 import com.sigraweb.documentofiscal.transformers.DFRegistryMatcher;

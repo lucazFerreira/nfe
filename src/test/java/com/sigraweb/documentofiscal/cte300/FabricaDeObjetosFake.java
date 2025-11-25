@@ -1,13 +1,5 @@
 package com.sigraweb.documentofiscal.cte300;
 
-import com.sigraweb.documentofiscal.DFAmbiente;
-import com.sigraweb.documentofiscal.DFModelo;
-import com.sigraweb.documentofiscal.DFUnidadeFederativa;
-import com.fincatto.documentofiscal.cte300.classes.*;
-import com.fincatto.documentofiscal.cte300.classes.nota.*;
-import com.sigraweb.documentofiscal.cte300.classes.*;
-import com.sigraweb.documentofiscal.cte300.classes.nota.*;
-
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -15,6 +7,61 @@ import java.time.LocalTime;
 import java.time.ZoneId;
 import java.util.Calendar;
 import java.util.Collections;
+
+import com.sigraweb.documentofiscal.DFAmbiente;
+import com.sigraweb.documentofiscal.DFModelo;
+import com.sigraweb.documentofiscal.DFUnidadeFederativa;
+import com.sigraweb.documentofiscal.cte300.classes.CTCodigoSituacaoTributariaICMS;
+import com.sigraweb.documentofiscal.cte300.classes.CTFinalidade;
+import com.sigraweb.documentofiscal.cte300.classes.CTIndicadorTomador;
+import com.sigraweb.documentofiscal.cte300.classes.CTModal;
+import com.sigraweb.documentofiscal.cte300.classes.CTProcessoEmissao;
+import com.sigraweb.documentofiscal.cte300.classes.CTRetirada;
+import com.sigraweb.documentofiscal.cte300.classes.CTTipoEmissao;
+import com.sigraweb.documentofiscal.cte300.classes.CTTipoImpressao;
+import com.sigraweb.documentofiscal.cte300.classes.CTTipoPrazoDataEntrega;
+import com.sigraweb.documentofiscal.cte300.classes.CTTipoPrazoHoraEntrega;
+import com.sigraweb.documentofiscal.cte300.classes.CTTipoServico;
+import com.sigraweb.documentofiscal.cte300.classes.CTTipoUnidadeCarga;
+import com.sigraweb.documentofiscal.cte300.classes.CTTomadorServico;
+import com.sigraweb.documentofiscal.cte300.classes.CTUnidadeMedida;
+import com.sigraweb.documentofiscal.cte300.classes.nota.CTeNotaEndereco;
+import com.sigraweb.documentofiscal.cte300.classes.nota.CTeNotaEnderecoEmitente;
+import com.sigraweb.documentofiscal.cte300.classes.nota.CTeNotaInfo;
+import com.sigraweb.documentofiscal.cte300.classes.nota.CTeNotaInfoCTeNormal;
+import com.sigraweb.documentofiscal.cte300.classes.nota.CTeNotaInfoCTeNormalCobranca;
+import com.sigraweb.documentofiscal.cte300.classes.nota.CTeNotaInfoCTeNormalCobrancaDuplicata;
+import com.sigraweb.documentofiscal.cte300.classes.nota.CTeNotaInfoCTeNormalCobrancaFatura;
+import com.sigraweb.documentofiscal.cte300.classes.nota.CTeNotaInfoCTeNormalInfoCarga;
+import com.sigraweb.documentofiscal.cte300.classes.nota.CTeNotaInfoCTeNormalInfoCargaInformacoesQuantidadeCarga;
+import com.sigraweb.documentofiscal.cte300.classes.nota.CTeNotaInfoCTeNormalInfoDocumentos;
+import com.sigraweb.documentofiscal.cte300.classes.nota.CTeNotaInfoCTeNormalInfoDocumentosInfoNFe;
+import com.sigraweb.documentofiscal.cte300.classes.nota.CTeNotaInfoCTeNormalInfoDocumentosInfoUnidadeCarga;
+import com.sigraweb.documentofiscal.cte300.classes.nota.CTeNotaInfoCTeNormalInfoModal;
+import com.sigraweb.documentofiscal.cte300.classes.nota.CTeNotaInfoCTeNormalInfoModalRodoviario;
+import com.sigraweb.documentofiscal.cte300.classes.nota.CTeNotaInfoCTeNormalInfoModalRodoviarioOrdemColetaAssociadas;
+import com.sigraweb.documentofiscal.cte300.classes.nota.CTeNotaInfoCTeNormalInfoModalRodoviarioOrdemColetaAssociadasEmi;
+import com.sigraweb.documentofiscal.cte300.classes.nota.CTeNotaInfoDadosComplementares;
+import com.sigraweb.documentofiscal.cte300.classes.nota.CTeNotaInfoDadosComplementaresEntrega;
+import com.sigraweb.documentofiscal.cte300.classes.nota.CTeNotaInfoDadosComplementaresEntregaComDataDefinida;
+import com.sigraweb.documentofiscal.cte300.classes.nota.CTeNotaInfoDadosComplementaresEntregaComHoraDefinida;
+import com.sigraweb.documentofiscal.cte300.classes.nota.CTeNotaInfoDadosComplementaresEntregaIntervalo;
+import com.sigraweb.documentofiscal.cte300.classes.nota.CTeNotaInfoDadosComplementaresEntregaPeriodo;
+import com.sigraweb.documentofiscal.cte300.classes.nota.CTeNotaInfoDadosComplementaresEntregaSemDataDefinida;
+import com.sigraweb.documentofiscal.cte300.classes.nota.CTeNotaInfoDadosComplementaresEntregaSemHoraDefinida;
+import com.sigraweb.documentofiscal.cte300.classes.nota.CTeNotaInfoDadosComplementaresFluxo;
+import com.sigraweb.documentofiscal.cte300.classes.nota.CTeNotaInfoDadosComplementaresFluxoPass;
+import com.sigraweb.documentofiscal.cte300.classes.nota.CTeNotaInfoDadosComplementaresObservacaoContribuinte;
+import com.sigraweb.documentofiscal.cte300.classes.nota.CTeNotaInfoEmitente;
+import com.sigraweb.documentofiscal.cte300.classes.nota.CTeNotaInfoIdentificacao;
+import com.sigraweb.documentofiscal.cte300.classes.nota.CTeNotaInfoIdentificacaoTomadorServico3;
+import com.sigraweb.documentofiscal.cte300.classes.nota.CTeNotaInfoIdentificacaoTomadorServico4;
+import com.sigraweb.documentofiscal.cte300.classes.nota.CTeNotaInfoInformacoesRelativasImpostos;
+import com.sigraweb.documentofiscal.cte300.classes.nota.CTeNotaInfoInformacoesRelativasImpostosICMS;
+import com.sigraweb.documentofiscal.cte300.classes.nota.CTeNotaInfoInformacoesRelativasImpostosICMS00;
+import com.sigraweb.documentofiscal.cte300.classes.nota.CTeNotaInfoInformacoesRelativasImpostosICMSPartilha;
+import com.sigraweb.documentofiscal.cte300.classes.nota.CTeNotaInfoValorPrestacaoServico;
+import com.sigraweb.documentofiscal.cte300.classes.nota.CTeNotaInfoValorPrestacaoServicoComponentesValorPrestacao;
 
 public class FabricaDeObjetosFake {
 

@@ -6,7 +6,7 @@ import com.sigraweb.documentofiscal.nfe310.classes.*;
 import org.simpleframework.xml.Element;
 
 import com.sigraweb.documentofiscal.DFBase;
-import com.fincatto.documentofiscal.nfe310.classes.*;
+import com.sigraweb.documentofiscal.nfe310.classes.*;
 import com.sigraweb.documentofiscal.validadores.BigDecimalParser;
 import com.sigraweb.documentofiscal.validadores.IntegerValidador;
 import com.sigraweb.documentofiscal.validadores.StringValidador;

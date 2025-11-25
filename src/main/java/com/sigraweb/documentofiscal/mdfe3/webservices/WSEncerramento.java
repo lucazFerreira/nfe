@@ -14,7 +14,7 @@ import com.sigraweb.documentofiscal.DFUnidadeFederativa;
 import com.sigraweb.documentofiscal.assinatura.AssinaturaDigital;
 import com.sigraweb.documentofiscal.mdfe3.MDFeConfig;
 import com.sigraweb.documentofiscal.mdfe3.classes.MDFAutorizador3;
-import com.fincatto.documentofiscal.mdfe3.classes.nota.evento.*;
+import com.sigraweb.documentofiscal.mdfe3.classes.nota.evento.*;
 import com.sigraweb.documentofiscal.mdfe3.classes.parsers.MDFChaveParser;
 import com.sigraweb.documentofiscal.mdfe3.webservices.recepcaoevento.MDFeRecepcaoEventoStub;
 import com.sigraweb.documentofiscal.persister.DFPersister;

@@ -6,7 +6,7 @@ import com.sigraweb.documentofiscal.nfe400.classes.*;
 import org.junit.Assert;
 import org.junit.Test;
 
-import com.fincatto.documentofiscal.nfe400.classes.*;
+import com.sigraweb.documentofiscal.nfe400.classes.*;
 
 public class NFNotaInfoItemImpostoICMS90Test {
 

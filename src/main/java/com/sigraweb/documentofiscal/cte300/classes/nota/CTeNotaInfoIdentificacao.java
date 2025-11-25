@@ -11,7 +11,7 @@ import com.sigraweb.documentofiscal.DFAmbiente;
 import com.sigraweb.documentofiscal.DFBase;
 import com.sigraweb.documentofiscal.DFModelo;
 import com.sigraweb.documentofiscal.DFUnidadeFederativa;
-import com.fincatto.documentofiscal.cte300.classes.*;
+import com.sigraweb.documentofiscal.cte300.classes.*;
 import com.sigraweb.documentofiscal.validadores.IntegerValidador;
 import com.sigraweb.documentofiscal.validadores.StringValidador;
 
