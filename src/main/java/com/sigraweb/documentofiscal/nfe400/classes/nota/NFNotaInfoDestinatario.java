@@ -19,6 +19,9 @@ public class NFNotaInfoDestinatario extends DFBase {
     @Element(name = "idEstrangeiro", required = false)
     private String idEstrangeiro;
 
+    @Element(name = "xNIF", required = false)
+    private String numeroIdentificacaoFiscal;
+
     @Element(name = "xNome", required = false)
     private String razaoSocial;
 
@@ -104,6 +107,11 @@ public class NFNotaInfoDestinatario extends DFBase {
         this.idEstrangeiro = idEstrangeiro;
     }
 
+    public void setNumeroIdentificacaoFiscal(final String numeroIdentificacaoFiscal) {
+        StringValidador.tamanho12N(numeroIdentificacaoFiscal, "Numero Identificacao Fiscal Destinatario");
+        this.numeroIdentificacaoFiscal = numeroIdentificacaoFiscal;
+    }
+
     public void setIndicadorIEDestinatario(final NFIndicadorIEDestinatario indicadorIEDestinatario) {
         this.indicadorIEDestinatario = indicadorIEDestinatario;
     }
@@ -143,5 +151,9 @@ public class NFNotaInfoDestinatario extends DFBase {
 
     public String getEmail() {
         return this.email;
+    }
+
+    public String getNumeroIdentificacaoFiscal() {
+        return this.numeroIdentificacaoFiscal;
     }
 }

@@ -319,6 +319,13 @@ public abstract class StringValidador {
             StringValidador.validaTamanhoMaximo(string, 12, info);
         }
     }
+    
+    public static void tamanho12N(final String string, final String info) {
+        if (string != null) {
+            StringValidador.apenasNumerico(string, info);
+            StringValidador.tamanho12(string, info);
+        }
+    }
 
     public static void tamanho120(final String string, final String info) {
         if (string != null) {

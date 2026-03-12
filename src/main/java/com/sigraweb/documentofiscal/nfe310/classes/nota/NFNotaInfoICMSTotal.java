@@ -67,6 +67,12 @@ public class NFNotaInfoICMSTotal extends DFBase {
     @Element(name = "vTotTrib", required = false)
     private String valorTotalTributos;
 
+    @Element(name = "Moeda", required = false)
+    private Integer moeda;
+
+    @Element(name = "vTxMoeda", required = false)
+    private String taxaMoeda;
+
     public void setBaseCalculoICMS(final BigDecimal baseCalculoICMS) {
         this.baseCalculoICMS = BigDecimalParser.tamanho15Com2CasasDecimais(baseCalculoICMS, "Base de Calculo ICMS Total");
     }
@@ -217,5 +223,21 @@ public class NFNotaInfoICMSTotal extends DFBase {
 
     public void setValorICMSPartilhaRementente(final BigDecimal valorICMSPartilhaRementente) {
         this.valorICMSPartilhaRementente = BigDecimalParser.tamanho15Com2CasasDecimais(valorICMSPartilhaRementente, "Valor ICMS Partilha Remetente");
+    }
+
+    public void setMoeda(final Integer moeda) {
+        this.moeda = moeda;
+    }
+
+    public Integer getMoeda() {
+        return this.moeda;
+    }
+
+    public void setTaxaMoeda(final BigDecimal taxaMoeda) {
+        this.taxaMoeda = BigDecimalParser.tamanho15Com4CasasDecimais(taxaMoeda, "Taxa Moeda");
+    }
+
+    public String getTaxaMoeda() {
+        return this.taxaMoeda;
     }
 }
