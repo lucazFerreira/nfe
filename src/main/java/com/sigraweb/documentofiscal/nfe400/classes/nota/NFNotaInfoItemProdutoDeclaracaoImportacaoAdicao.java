@@ -29,9 +29,6 @@ public class NFNotaInfoItemProdutoDeclaracaoImportacaoAdicao extends DFBase {
     @Element(name = "nDraw", required = false)
     private BigInteger numeroAtoConcessorioDrawback;
 
-    @Element(name = "despesas", required = false)
-    private NFNotaInfoItemDespesas despesas;
-
     public void setNumero(final Integer numero) {
         IntegerValidador.tamanho3(numero, "Numero Declaracao Importacao Adicao");
         this.numero = numero;
@@ -74,13 +71,5 @@ public class NFNotaInfoItemProdutoDeclaracaoImportacaoAdicao extends DFBase {
 
     public BigInteger getNumeroAtoConcessorioDrawback() {
         return this.numeroAtoConcessorioDrawback;
-    }
-
-    public void setDespesas(final NFNotaInfoItemDespesas despesas) {
-        this.despesas = despesas;
-    }
-
-    public NFNotaInfoItemDespesas getDespesas() {
-        return this.despesas;
     }
 }

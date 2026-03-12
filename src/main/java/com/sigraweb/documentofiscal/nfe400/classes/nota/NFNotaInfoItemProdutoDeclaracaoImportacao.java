@@ -51,6 +51,9 @@ public class NFNotaInfoItemProdutoDeclaracaoImportacao extends DFBase {
     @ElementList(entry = "adi", inline = true, required = true)
     private List<NFNotaInfoItemProdutoDeclaracaoImportacaoAdicao> adicoes;
 
+    @Element(name = "despesas", required = false)
+    private NFNotaInfoItemDespesas despesas;
+
     public void setNumeroRegistro(final String numeroRegistro) {
         StringValidador.tamanho15(numeroRegistro, "Numero Registro Declaracao Importacao");
         this.numeroRegistro = numeroRegistro;
@@ -149,5 +152,13 @@ public class NFNotaInfoItemProdutoDeclaracaoImportacao extends DFBase {
 
     public List<NFNotaInfoItemProdutoDeclaracaoImportacaoAdicao> getAdicoes() {
         return this.adicoes;
+    }
+
+    public void setDespesas(final NFNotaInfoItemDespesas despesas) {
+        this.despesas = despesas;
+    }
+
+    public NFNotaInfoItemDespesas getDespesas() {
+        return this.despesas;
     }
 }
