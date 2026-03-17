@@ -67,7 +67,7 @@ public class NFNotaInfoItemImpostoImportacaoTest {
 
     @Test
     public void deveGerarXMLDeAcordoComOPadraoEstabelecido() {
-        final String xmlEsperado = "<NFNotaInfoItemImpostoImportacao><vBC>999999999999.99</vBC><vDespAdu>999999999999.99</vDespAdu><vII>999999999999.99</vII><vIOF>999999999999.99</vIOF></NFNotaInfoItemImpostoImportacao>";
+        final String xmlEsperado = "<NFNotaInfoItemImpostoImportacao><vBC>999999999999.99</vBC><vDespAdu>999999999999.99</vDespAdu><vII>999999999999.99</vII><vIOF>999999999999.99</vIOF><pII>99.9999</pII></NFNotaInfoItemImpostoImportacao>";
         Assert.assertEquals(xmlEsperado, FabricaDeObjetosFake.getNFNotaInfoItemImpostoImportacao().toString());
     }
 }

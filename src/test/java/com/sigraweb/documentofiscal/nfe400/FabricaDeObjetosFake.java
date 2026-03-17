@@ -1068,6 +1068,7 @@ public class FabricaDeObjetosFake {
         importacao.setValorDespesaAduaneira(new BigDecimal("999999999999.99"));
         importacao.setValorImpostoImportacao(new BigDecimal("999999999999.99"));
         importacao.setValorIOF(new BigDecimal("999999999999.99"));
+        importacao.setPercentualII(new BigDecimal("99.9999"));
         return importacao;
     }
 

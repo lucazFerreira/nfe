@@ -22,11 +22,15 @@ public class NFNotaInfoItemImpostoImportacao extends DFBase {
     @Element(name = "vIOF", required = true)
     private String valorIOF;
 
+    @Element(name = "pII", required = false)
+    private String percentualII;
+
     public NFNotaInfoItemImpostoImportacao() {
         this.valorBaseCalculo = null;
         this.valorDespesaAduaneira = null;
         this.valorImpostoImportacao = null;
         this.valorIOF = null;
+        this.percentualII = null;
     }
 
     public void setValorBaseCalculo(final BigDecimal valorBaseCalculo) {
@@ -59,5 +63,13 @@ public class NFNotaInfoItemImpostoImportacao extends DFBase {
 
     public String getValorIOF() {
         return this.valorIOF;
+    }
+
+    public void setPercentualII(final BigDecimal percentualII) {
+        this.percentualII = BigDecimalParser.tamanho7ComAte4CasasDecimais(percentualII, "Percentual Imposto Importacao Item");
+    }
+
+    public String getPercentualII() {
+        return this.percentualII;
     }
 }
