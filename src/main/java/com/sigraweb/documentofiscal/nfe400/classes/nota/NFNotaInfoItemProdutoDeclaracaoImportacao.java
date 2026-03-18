@@ -47,6 +47,9 @@ public class NFNotaInfoItemProdutoDeclaracaoImportacao extends DFBase {
 
     @Element(name = "cExportador", required = true)
     private String codigoExportador;
+    
+    @Element(name = "cPedProcesso", required = false)
+    private String codigoPedido;
 
     @ElementList(entry = "adi", inline = true, required = true)
     private List<NFNotaInfoItemProdutoDeclaracaoImportacaoAdicao> adicoes;
@@ -79,6 +82,11 @@ public class NFNotaInfoItemProdutoDeclaracaoImportacao extends DFBase {
     public void setCodigoExportador(final String codigoExportador) {
         StringValidador.tamanho60(codigoExportador, "Codigo Exportador Declaracao Importacao");
         this.codigoExportador = codigoExportador;
+    }
+    
+    public void setCodigoPedido(final String codigoPedido) {
+        StringValidador.tamanho60(codigoPedido, "Codigo Pedido Declaracao Importacao");
+        this.codigoPedido = codigoPedido;
     }
 
     public void setAdicoes(final List<NFNotaInfoItemProdutoDeclaracaoImportacaoAdicao> adicoes) {
@@ -148,6 +156,10 @@ public class NFNotaInfoItemProdutoDeclaracaoImportacao extends DFBase {
 
     public String getCodigoExportador() {
         return this.codigoExportador;
+    }
+    
+    public String getCodigoPedido() {
+        return this.codigoPedido;
     }
 
     public List<NFNotaInfoItemProdutoDeclaracaoImportacaoAdicao> getAdicoes() {

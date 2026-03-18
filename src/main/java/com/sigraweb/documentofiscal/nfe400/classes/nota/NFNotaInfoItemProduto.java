@@ -123,6 +123,12 @@ public class NFNotaInfoItemProduto extends DFBase {
 
     @Element(name = "nRECOPI", required = false)
     private String numeroRECOPI;
+    
+    @Element(name = "pesoL", required = false)
+    private String pesoLiquido;
+    
+    @Element(name = "pesoB", required = false)
+    private String pesoBruto;
 
     public void setCodigo(final String codigo) {
         StringValidador.tamanho60(codigo, "Codigo Produto");
@@ -203,6 +209,14 @@ public class NFNotaInfoItemProduto extends DFBase {
 
     public void setValorOutrasDespesasAcessorias(final BigDecimal valorOutrasDespesasAcessorias) {
         this.valorOutrasDespesasAcessorias = BigDecimalParser.tamanho15Com2CasasDecimais(valorOutrasDespesasAcessorias, "Valor Outras Despesas Acessorias Produto");
+    }
+    
+    public void setPesoLiquido(final BigDecimal pesoLiquido) {
+        this.pesoLiquido = BigDecimalParser.tamanho15Com2CasasDecimais(pesoLiquido, "Peso Liquido Produto");
+    }
+    
+    public void setPesoBruto(final BigDecimal pesoBruto) {
+        this.pesoBruto = BigDecimalParser.tamanho15Com2CasasDecimais(pesoBruto, "Peso Bruto Produto");
     }
 
     public void setCampoeValorNota(final NFProdutoCompoeValorNota compoeValorNota) {
@@ -438,4 +452,12 @@ public class NFNotaInfoItemProduto extends DFBase {
     public List<NFNotaInfoItemProdutoRastreabilidade> getRastros() {
         return this.rastros;
     }
+
+	public String getPesoLiquido() {
+		return this.pesoLiquido;
+	}
+
+	public String getPesoBruto() {
+		return this.pesoBruto;
+	}    
 }
