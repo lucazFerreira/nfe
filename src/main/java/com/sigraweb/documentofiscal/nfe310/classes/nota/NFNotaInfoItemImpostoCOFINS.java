@@ -1,5 +1,7 @@
 package com.sigraweb.documentofiscal.nfe310.classes.nota;
 
+import java.time.LocalDate;
+
 import org.simpleframework.xml.Element;
 
 import com.sigraweb.documentofiscal.DFBase;
@@ -7,6 +9,9 @@ import com.sigraweb.documentofiscal.DFBase;
 public class NFNotaInfoItemImpostoCOFINS extends DFBase {
     private static final long serialVersionUID = -2776137091542174644L;
 
+    @Element(name = "dPgto", required = false)
+    private LocalDate dataPagamento;
+    
     @Element(name = "COFINSAliq", required = false)
     private NFNotaInfoItemImpostoCOFINSAliquota aliquota;
 
@@ -62,4 +67,13 @@ public class NFNotaInfoItemImpostoCOFINS extends DFBase {
     public NFNotaInfoItemImpostoCOFINSOutrasOperacoes getOutrasOperacoes() {
         return this.outrasOperacoes;
     }
+    
+	public LocalDate getDataPagamento() {
+		return dataPagamento;
+	}
+
+	public void setDataPagamento(final LocalDate dataPagamento) {
+		this.dataPagamento = dataPagamento;
+	}
+	
 }

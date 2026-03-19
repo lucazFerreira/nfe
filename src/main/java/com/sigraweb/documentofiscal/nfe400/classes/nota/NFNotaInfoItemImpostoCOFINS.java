@@ -1,6 +1,7 @@
 package com.sigraweb.documentofiscal.nfe400.classes.nota;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
 
 import org.simpleframework.xml.Element;
 
@@ -10,6 +11,9 @@ import com.sigraweb.documentofiscal.validadores.BigDecimalParser;
 public class NFNotaInfoItemImpostoCOFINS extends DFBase {
     private static final long serialVersionUID = -2776137091542174644L;
 
+    @Element(name = "dPgto", required = false)
+    private LocalDate dataPagamento;
+    
     @Element(name = "COFINSAliq", required = false)
     private NFNotaInfoItemImpostoCOFINSAliquota aliquota;
 
@@ -76,4 +80,13 @@ public class NFNotaInfoItemImpostoCOFINS extends DFBase {
 	public String getValorBaseCalculo() {
 		return this.valorBaseCalculo;
 	}
+	
+	public LocalDate getDataPagamento() {
+		return dataPagamento;
+	}
+
+	public void setDataPagamento(final LocalDate dataPagamento) {
+		this.dataPagamento = dataPagamento;
+	}
+	
 }
